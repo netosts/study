@@ -1,0 +1,24 @@
+services:
+  opencode:
+    image: ghcr.io/anomalyco/opencode
+    stdin_open: true
+    tty: true
+    working_dir: /workspace
+
+    volumes:
+      - .:/workspace
+      - opencode-global-data:/root/.local/share/opencode
+      - opencode-global-config:/root/.config/opencode
+
+    security_opt:
+      - no-new-privileges:true
+
+    env_file:
+      - ${HOME}/.config/opencode/context7.env
+
+volumes:
+  opencode-global-data:
+    external: true
+
+  opencode-global-config:
+    external: true
