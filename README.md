@@ -108,8 +108,11 @@ Exemplo:
 
 ```bash
 mkdir -p ~/.config/opencode
+npx ctx7 setup --opencode
 nano ~/.config/opencode/context7.env
 ```
+
+Verifique o site para mais instruções de instalação do próprio context7 [https://context7.com/install]
 
 Coloque nesse arquivo somente as variáveis necessárias para o Context7.
 
